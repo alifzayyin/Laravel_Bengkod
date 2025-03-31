@@ -48,10 +48,11 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
     public function periksa_pasien(){
-        return $this->hasMany(Periksa::class, 'id_pasien', 'id_pasien');
+        return $this->hasMany(Periksa::class, 'id_pasien', 'id');
     }
     public function periksa_dokter(){
-        return $this->hasMany(Periksa::class, 'id_dokter', 'id_dokter');
+        return $this->hasMany(Periksa::class, 'id_dokter', 'id');
     }
 }
