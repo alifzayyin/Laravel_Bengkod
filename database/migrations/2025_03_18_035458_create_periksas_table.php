@@ -17,7 +17,7 @@ return new class extends Migration
             $table->unsignedBigInteger('id_dokter')->constrained()->onDelete('cascade');
             $table->dateTime('tgl_periksa');
             $table->longText('catatan');
-            $table->bigInteger('biaya_periksa');
+            $table->bigInteger('biaya_pemeriksaan');
             $table->timestamps();
 
             // Foreign key constraints
