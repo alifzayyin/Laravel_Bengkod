@@ -18,6 +18,7 @@ class Periksa extends Model
         'biaya_pemeriksaan',
     ];
 
+<<<<<<< HEAD
     public function pasien(): BelongsTo
     {
         return $this->belongsTo(User::class, 'id_pasien');
@@ -31,3 +32,15 @@ class Periksa extends Model
         return $this->hasMany(DetailPeriksa::class, 'id_periksa', 'id');
     }
 }
+=======
+    public function pasien(){
+        return $this->belongsTo(User::class, 'id_pasien');
+    }
+    public function dokter(){
+        return $this->belongsTo(User::class, 'id_dokter');
+    }
+    public function detail_periksa(){
+        return $this->hasMany(DetailPeriksa::class, 'id_periksa', 'id');
+    }
+}
+>>>>>>> 93e6fae (Tugas Bengkod3)

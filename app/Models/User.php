@@ -32,6 +32,7 @@ class User extends Authenticatable
         ];
     }
 
+<<<<<<< HEAD
     public function periksa_pasien(): HasMany
     {
         return $this->hasMany(Periksa::class, 'id_pasien', 'id');
@@ -39,6 +40,12 @@ class User extends Authenticatable
 
     public function periksa_dokter(): HasMany
     {
+=======
+    public function periksa_pasien(){
+        return $this->hasMany(Periksa::class, 'id_pasien', 'id');
+    }
+    public function periksa_dokter(){
+>>>>>>> 93e6fae (Tugas Bengkod3)
         return $this->hasMany(Periksa::class, 'id_dokter', 'id');
     }
 

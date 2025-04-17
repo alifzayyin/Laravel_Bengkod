@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 class ObatController extends Controller
 {
+<<<<<<< HEAD
     public function index()
     {
         $obats = Obat::all();
@@ -54,3 +55,11 @@ class ObatController extends Controller
         return redirect()->route('obat.index')->with('success', 'Obat berhasil dihapus.');
     }
 }
+=======
+    public function index() {
+        $obats = Obat::all();
+
+        return view('dokter.obat', compact('obats'));
+    }
+}
+>>>>>>> 93e6fae (Tugas Bengkod3)
